@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Final Note - Meagan's B-Day 🎡</title>
+    <title>Final Note - Meagan's B-Day</title>
     <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet" />
     <style>
         body {
@@ -156,7 +156,6 @@
     </style>
 </head>
 <body>
-<!-- Navigation -->
 <nav class="navbar">
     <div class="logo">💜 Meagan's B-Day 💜</div>
     <input type="checkbox" id="menu-toggle" style="display:none;">
@@ -200,14 +199,12 @@
 </div>
 
 <script>
-    // Responsive nav menu toggle
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     menuToggle.addEventListener('change', () => {
       navLinks.classList.toggle('active', menuToggle.checked);
     });
 
-    // Show final note when letter clicked
     const letter = document.getElementById('letter');
     const finalNote = document.getElementById('finalNote');
     let noteVisible = false;
@@ -215,7 +212,6 @@
     letter.addEventListener('click', () => {
       if (!noteVisible) {
         finalNote.classList.add('show');
-        // Optionally hide the letter or fade it out
         letter.style.opacity = '0.3';
         noteVisible = true;
       } else {
