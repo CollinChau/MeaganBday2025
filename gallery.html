@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery - Meagan's B-Day 🎡</title>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@500;600&display=swap" rel="stylesheet" />
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: 'Edu QLD Hand', cursive;
+          background: #f4e9ff;
+          color: #4b2c83;
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+          animation: fadeIn 1s ease forwards;
+        }
+
+        nav.navbar {
+          background-color: #9f7ae0;
+          padding: 12px 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          color: white;
+          position: sticky;
+          top: 0;
+          z-index: 100;
+        }
+
+        .logo {
+          font-size: 1.4rem;
+          font-weight: 600;
+        }
+
+        .nav-links {
+          list-style: none;
+          display: flex;
+          gap: 25px;
+          padding: 0;
+          margin: 0;
+        }
+
+        .nav-links li a {
+          color: white;
+          text-decoration: none;
+          font-weight: 500;
+          transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+          color: #d8b3ff;
+        }
+
+        .hamburger {
+          display: none;
+          font-size: 2rem;
+          cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+          .nav-links {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            display: none;
+          }
+
+          .nav-links.active {
+            display: flex;
+          }
+
+          .hamburger {
+            display: block;
+          }
+        }
+
+        h1 {
+          margin-top: 40px;
+          margin-bottom: 60px; /* More space */
+          text-shadow: 1px 1px 5px rgba(203, 116, 230, 0.5);
+          font-size: 2.8rem;
+          text-align: center;
+        }
+
+        /* Carousel styles */
+        .carousel-wrapper {
+          max-width: 720px;  /* 3 images * 240px */
+          margin-left: auto;
+          margin-right: auto;
+          overflow: hidden;
+          position: relative;
+        }
+
+        .carousel {
+          display: flex;
+          transition: transform 0.5s ease;
+          will-change: transform;
+          user-select: none;
+        }
+
+        .carousel img {
+          flex: 0 0 240px;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 15px;
+          box-shadow: 0 8px 16px rgba(151, 112, 255, 0.3);
+          margin: 0 10px;
+          transition: transform 0.5s ease, box-shadow 0.5s ease;
+          cursor: pointer;
+        }
+
+        /* Highlight center image */
+        .carousel img.center {
+          transform: scale(1.1);
+          box-shadow: 0 12px 24px rgba(151, 112, 255, 0.6);
+          z-index: 10;
+        }
+
+        .carousel-buttons {
+          margin-top: 25px;
+          display: flex;
+          justify-content: center;
+          gap: 30px;
+        }
+
+        .carousel-buttons button {
+          background-color: #9f7ae0;
+          border: none;
+          color: white;
+          padding: 12px 28px;
+          font-size: 1.1rem;
+          border-radius: 25px;
+          cursor: pointer;
+          box-shadow: 0 6px 14px rgba(151, 112, 255, 0.5);
+          transition: background-color 0.4s ease, transform 0.3s ease;
+          user-select: none;
+        }
+
+        .carousel-buttons button:hover {
+          background-color: #7b5fc1;
+          transform: scale(1.05);
+        }
+
+        .carousel-buttons button:active {
+          transform: scale(0.95);
+        }
+
+        /* Video wrapper styles */
+        .video-wrapper {
+          max-width: 720px;
+          margin: 40px auto;
+          text-align: center;
+        }
+
+        .video-wrapper video {
+          border-radius: 15px;
+          box-shadow: 0 8px 16px rgba(151, 112, 255, 0.3);
+          max-width: 100%;
+          height: auto;
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(15px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="logo">💜 Meagan's B-Day 💜</div>
+    <input type="checkbox" id="menu-toggle" style="display:none;">
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="message.html">Message</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="final.html">Note</a></li>
+    </ul>
+</nav>
+
+<h1>Funny Images and Vids 🎡</h1>
+
+<section class="carousel-wrapper">
+    <div class="carousel" id="carousel">
+        <img src="images/meagan1.jpg" alt="Memory 1" />
+        <img src="images/meagan2.jpg" alt="Memory 2" />
+        <img src="images/meagan3.jpg" alt="Memory 3" />
+        <img src="images/meagan4.jpg" alt="Memory 4" />
+        <img src="images/meagan5.jpg" alt="Memory 5" />
+        <img src="images/meagan6.jpg" alt="Memory 6" />
+        <img src="images/meagan7.jpg" alt="Memory 7" />
+        <img src="images/meagan8.png" alt="Memory 8" />
+        <img src="images/meagan9.jpg" alt="Memory 9" />
+        <img src="images/meagan10.jpg" alt="Memory 10" />
+        <img src="images/meagan11.jpg" alt="Memory 11" />
+        <img src="images/meagan12.jpg" alt="Memory 12" />
+        <img src="images/meagan13.jpg" alt="Memory 13" />
+    </div>
+    <div class="carousel-buttons">
+        <button id="prevBtn">← Prev</button>
+        <button id="nextBtn">Next →</button>
+    </div>
+</section>
+
+<section class="video-wrapper">
+    <video width="720" height="405" controls>
+        <source src="images/meagan14.MP4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+<script>
+    const carousel = document.getElementById('carousel');
+    const images = Array.from(carousel.children);
+    const visibleCount = 3; // Number of images visible at once
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      // Calculate translateX based on currentIndex
+      const imgWidth = images[0].offsetWidth + 20; // 240 + 20 margin total
+      const offset = -currentIndex * imgWidth;
+      carousel.style.transform = `translateX(${offset}px)`;
+
+      // Clear all center classes
+      images.forEach(img => img.classList.remove('center'));
+
+      // Add center class to middle visible image
+      // The center image is the one in the middle of the visible window:
+      // currentIndex + Math.floor(visibleCount / 2)
+      let centerIndex = currentIndex + Math.floor(visibleCount / 2);
+      if (centerIndex >= images.length) centerIndex = centerIndex % images.length;
+
+      images[centerIndex].classList.add('center');
+    }
+
+    function prev() {
+      if (currentIndex === 0) {
+        currentIndex = images.length - visibleCount; // wrap to end
+      } else {
+        currentIndex--;
+      }
+      updateCarousel();
+    }
+
+    function next() {
+      if (currentIndex >= images.length - visibleCount) {
+        currentIndex = 0; // wrap to start
+      } else {
+        currentIndex++;
+      }
+      updateCarousel();
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', prev);
+    document.getElementById('nextBtn').addEventListener('click', next);
+
+    // Initialize
+    window.addEventListener('load', () => {
+      updateCarousel();
+    });
+
+    // Responsive nav menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuToggle.addEventListener('change', () => {
+      navLinks.classList.toggle('active', menuToggle.checked);
+    });
+</script>
+</body>
+</html>

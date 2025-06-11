@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Meagan 🤓</title>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: 'Edu QLD Hand', cursive;
+          background: #f4e9ff;
+          color: #4b2c83;
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+          animation: fadeIn 1s ease forwards;
+        }
+
+        nav.navbar {
+          background-color: #9f7ae0;
+          padding: 12px 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          color: white;
+        }
+
+        .logo {
+          font-size: 1.4rem;
+          font-weight: 600;
+        }
+
+        .nav-links {
+          list-style: none;
+          display: flex;
+          gap: 25px;
+          padding: 0;
+          margin: 0;
+        }
+
+        .nav-links li a {
+          color: white;
+          text-decoration: none;
+          font-weight: 500;
+        }
+
+        main {
+          padding: 40px 20px;
+          max-width: 900px;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        h1 {
+          font-size: 2.8rem;
+          margin-bottom: 0px;
+          text-shadow: 1px 1px 4px rgba(107, 56, 175, 0.6);
+        }
+
+        p.intro {
+          font-size: 1.2rem;
+          max-width: 700px;
+          margin: 0 auto 0;
+          line-height: 1.6;
+        }
+
+        .traits-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 20px;
+          margin-top: 0;
+          padding-top: 0;
+          margin-bottom: 1rem;
+        }
+
+        .trait-card {
+          position: relative;
+          background: #9f7ae0;
+          color: white;
+          border-radius: 15px;
+          padding: 16px;
+          font-weight: 600;
+          font-size: 1.1rem;
+          box-shadow: 0 4px 8px rgba(151, 112, 255, 0.3);
+          cursor: pointer;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+
+          min-height: 80px;
+          transition: transform 0.3s ease, box-shadow 0.3s ease, justify-content 0.3s ease;
+          overflow: hidden;
+          margin-top: 0;
+        }
+
+        .trait-card:hover {
+          transform: scale(1.05);
+          box-shadow: 0 8px 16px rgba(151, 112, 255, 0.6);
+          justify-content: flex-start;
+        }
+
+        .trait-card .title {
+          transition: margin-bottom 0.3s ease, transform 0.3s ease;
+          margin-bottom: 0;
+        }
+
+        .trait-card:hover .title {
+          margin-bottom: 8px;
+        }
+
+        .trait-card > .description {
+          font-family: 'Funnel Display', sans-serif;
+          opacity: 0;
+          font-weight: 400;
+          font-size: 0.95rem;
+          line-height: 1.4;
+          max-height: 0;
+          overflow: hidden;
+          transform: translateY(10px);
+          transition: opacity 0.3s ease, max-height 0.3s ease, transform 0.3s ease;
+          pointer-events: none;
+        }
+
+        .trait-card:hover > .description {
+          opacity: 1;
+          max-height: 200px;
+          transform: translateY(0);
+          pointer-events: auto;
+        }
+
+        .confidence {
+          font-family: 'Funnel Display', sans-serif;
+          font-style: italic;
+          font-size: 1.15rem;
+          max-width: 700px;
+          margin: 0 auto;
+          animation: pulse 2.5s ease infinite;
+        }
+
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(15px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes pulse {
+          0%, 100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.6;
+          }
+        }
+
+        @media (max-width: 600px) {
+          .nav-links {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+          }
+
+          .logo {
+            margin-bottom: 10px;
+          }
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="logo">💜 Meagan's B-Day 💜</div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="message.html">Message</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="final.html">Note</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h1>About Meagan 🤓</h1>
+    <p class="intro">
+        Today we're celebrating you! YOUR talents, YOUR kindness, and everything that makes YOU amazing! (P.S. Hover over the "cards")
+    </p>
+
+    <section class="traits-grid">
+        <div class="trait-card">
+            🏸 Loves playing badminton
+            <p class="description">Ever since I've known you, you have played badminton so much, it seems like an addiction 😭🙏</p>
+        </div>
+        <div class="trait-card">
+            💜 Passionate volunteer
+            <p class="description">The amount of time you spend volunteering is insane when you can be talking to me 🤬(jk, good job with your volunteering gng!)</p>
+        </div>
+        <div class="trait-card">
+            🎯 Skilled at Chinese yo-yo
+            <p class="description">Even though I've never seen you actually perform doing the chinese yoyo, ima just say you're BETTER than your brother, and you clearly put in the work, honestly it's impressive</p>
+        </div>
+        <div class="trait-card">
+            👂 An incredible listener
+            <p class="description">Although I never talk to u irl, u always "listen" to me yap bout my crushes and my secrets and feelings, and i really appreciate it lol</p>
+        </div>
+        <div class="trait-card">
+            💡 Smart and creative
+            <p class="description">Bro when i first talked to u, I thought u were stupid, uh stupid, and not smart. But NOW, I see, ur clearly in a special needs class (kiddinggg). You're actually insanely smart bro, it's not even funny. You make me feel stupid sometimes (but thats good lol) 😭</p>
+        </div>
+        <div class="trait-card">
+            🎨 Amazing artist
+            <p class="description">Bro your art is actually insanely good. Like legitimately, it's so pretty? idk any other adjectives lmao but it's really good and it lowk made me wanna go back into art. </p>
+        </div>
+        <div class="trait-card">
+            💤 Sleeps and Eats
+            <p class="description">I can't lie, the 2 main reasons why you don't respond to me half the time is cause ur either eating or sleeping and thats actually insanely funny to me lmao. But dont worry sleep and food is good for u! WAIT I JUST REALIZED UR BASICALLY A BEAR LMAO.</p>
+        </div>
+        <div class="trait-card">
+            🤗 Kind-hearted and thoughtful
+            <p class="description">Bro honestly the way you tolerate with me, your actually really nice, and I've also seen you do a lot of nice stuff for ur friends and kind of stand up for people, and that pretty cool man.</p>
+        </div>
+        <div class="trait-card">
+            👯‍♀️ My Cantonese twin
+            <p class="description">Bro we're legit twins, it's not even funny but you copied me cuz im cantonese, the thing is half our interests sort of align but at the same time they dont? idek lmao</p>
+        </div>
+    </section>
+
+    <p class="confidence">
+        Meagan, you only have like one major flaw, and im being serious. You like females, JK JK, you need to be more confident (coming from a friend, don't get the wrong idea!!!) Honestly, you're insanely smart, and your personality is pretty good, but ur also actually insanely funny. But confidence is key and you need that key. Holy I sound like a loser.
+    </p>
+</main>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Final Note - Meagan's B-Day 🎡</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet" />
+    <style>
+        body {
+          margin: 0;
+          padding: 0 20px 40px;
+          font-family: 'Fugaz One', cursive;
+          background: #f4e9ff;
+          color: #4b2c83;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          animation: fadeIn 1s ease forwards;
+          text-align: center;
+        }
+
+        nav.navbar {
+          background-color: #9f7ae0;
+          padding: 12px 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          color: white;
+          position: sticky;
+          top: 0;
+          z-index: 100;
+        }
+
+        .logo {
+          font-size: 1.4rem;
+          font-weight: 600;
+        }
+
+        .nav-links {
+          list-style: none;
+          display: flex;
+          gap: 25px;
+          padding: 0;
+          margin: 0;
+        }
+
+        .nav-links li a {
+          color: white;
+          text-decoration: none;
+          font-weight: 500;
+          transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+          color: #d8b3ff;
+        }
+
+        .hamburger {
+          display: none;
+          font-size: 2rem;
+          cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+          .nav-links {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            display: none;
+          }
+
+          .nav-links.active {
+            display: flex;
+          }
+
+          .hamburger {
+            display: block;
+          }
+        }
+
+        h1 {
+          margin-top: 40px;
+          margin-bottom: 30px;
+          font-size: 3rem;
+          text-shadow: 1px 1px 5px rgba(203, 116, 230, 0.5);
+        }
+        p.caption {
+          font-size: 1.2rem;
+          color: #7e57c2;
+          margin-top: -10px;
+          margin-bottom: 25px;
+          font-style: italic;
+        }
+
+        .letter-container {
+          margin: 0 auto;
+          max-width: 300px;
+          cursor: pointer;
+          user-select: none;
+          transition: transform 0.3s ease;
+        }
+        .letter-container:hover {
+          transform: scale(1.05);
+        }
+
+        .letter-image {
+          width: 100%;
+          height: auto;
+          border-radius: 15px;
+          box-shadow: 0 8px 15px rgba(159, 122, 224, 0.6);
+        }
+
+        .final-note-container {
+          max-width: 700px;
+          margin: 30px auto 0;
+          background: #e9d9ff;
+          padding: 30px 40px;
+          border-radius: 15px;
+          box-shadow: 0 8px 20px rgba(151, 112, 255, 0.4);
+          font-size: 1.4rem;
+          line-height: 1.7;
+          color: #3b1f5f;
+          white-space: pre-wrap;
+          opacity: 0;
+          max-height: 0;
+          overflow: hidden;
+          transition: opacity 0.6s ease, max-height 0.6s ease;
+        }
+
+        .final-note-container.show {
+          opacity: 1;
+          max-height: 1000px;
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(15px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @media (max-width: 600px) {
+          h1 {
+            font-size: 2.2rem;
+          }
+          .final-note-container {
+            font-size: 1.2rem;
+            padding: 20px 25px;
+          }
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="logo">💜 Meagan's B-Day 💜</div>
+    <input type="checkbox" id="menu-toggle" style="display:none;">
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="message.html">Message</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="fun.html">Fun</a></li>
+        <li><a href="final.html">Final Note</a></li>
+    </ul>
+</nav>
+
+<h1>Thank You For Celebrating!</h1>
+<p class="caption">P.S. Press on the letter</p>
+<div class="letter-container" id="letter">
+    <img
+            src="https://cdn.creazilla.com/cliparts/77028/open-envelope-clipart-xl.png"
+            alt="Sealed Letter"
+            class="letter-image"
+            title="Click to open the final note"
+    />
+</div>
+
+<div class="final-note-container" id="finalNote">
+    <p>
+        Dear Meagan,
+
+        Happy Birthday! 🎉
+
+        I wanted to write you a special note kind of like the message page, but this one feels a little less about your birthday. I hope your day is amazing cause you deserve it!
+
+        Also, a huge shout out to Crystal for giving all those amazing photos (bro you need to cover your forehead, jk ur not as bad looking as I say you are). You should still jump her though, but honestly she's pretty good friend cause she I didn't know it was your birthday till Tuesday (she had to tell me)
+
+        But less bout her and more about you. Thanks for being such a great friend, and helping me with schoolwork, giving advice, and even my goofy ahh crush's bro 😭
+
+        Sincerely (holy this sound too formal),
+        Collin
+    </p>
+</div>
+
+<script>
+    // Responsive nav menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuToggle.addEventListener('change', () => {
+      navLinks.classList.toggle('active', menuToggle.checked);
+    });
+
+    // Show final note when letter clicked
+    const letter = document.getElementById('letter');
+    const finalNote = document.getElementById('finalNote');
+    let noteVisible = false;
+
+    letter.addEventListener('click', () => {
+      if (!noteVisible) {
+        finalNote.classList.add('show');
+        // Optionally hide the letter or fade it out
+        letter.style.opacity = '0.3';
+        noteVisible = true;
+      } else {
+        finalNote.classList.remove('show');
+        letter.style.opacity = '1';
+        noteVisible = false;
+      }
+    });
+</script>
+</body>
+</html>

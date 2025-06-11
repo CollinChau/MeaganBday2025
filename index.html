@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Happy Birthday Meagan! 🤯</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+    <div class="logo">💜 Meagan's B-Day 💜</div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="message.html">Message</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="final.html">Note</a></li>
+    </ul>
+</nav>
+</header>
+
+<div class="intro">
+    <h1>🎉 Happy Birthday, Meagan! 🎉</h1>
+    <p>June 14th — Today’s the day you were birthed! 🤯</p>
+    <p>Made by your awesome, cool, good-looking, and smart homeboy (Collin 😎)</p>
+    <a href="about.html" class="button">Start Exploring 💜</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+    window.onload = () => {
+      confetti({
+        particleCount: 180,
+        spread: 90,
+        origin: { y: 0.6 },
+        colors: ['#a678de', '#f6c1ff', '#ffffff']
+      });
+    };
+</script>
+</body>
+</html>
